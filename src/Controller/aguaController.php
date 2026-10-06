@@ -20,12 +20,12 @@ class WaterController
         $chlorine = (float)($data['chlorine'] ?? 0);
         $biofilterRate = (float)($data['biofilter_rate'] ?? 20.0);
 
-        // Classificação antes do filtro
+
         $phStatus = $this->aguaModel->classifyParameter('ph', $ph);
         $turbidityStatus = $this->aguaModel->classifyParameter('turbidity', $turbidity);
         $chlorineStatus = $this->aguaModel->classifyParameter('chlorine', $chlorine);
 
-        // Simulação do biofiltro na turbidez
+
         $filteredTurbidity = $this->aguaModel->simulateBiofilter($turbidity, $biofilterRate);
         $filteredTurbidityStatus = $this->aguaModel->classifyParameter('turbidity', $filteredTurbidity);
 
