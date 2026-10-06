@@ -1,6 +1,5 @@
 <?php
-require_once __DIR__ . '/../src/Model/aguaQuality.php';
-require_once __DIR__ . '/../src/Controller/aguaController.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 use Model\aguaQualidade;
 use Controller\aguaController;
@@ -98,21 +97,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </body>
 </html>
-5. Configuração do Composer (composer.json)
-JSON
-{
-    "name": "projeto/qualidade-agua",
-    "type": "project",
-    "require": {
-        "php": ">=8.4"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^10.5"
-    },
-    "autoload": {
-        "psr-4": {
-            "Controller\\": "src/Controller/",
-            "Model\\": "src/Model/"
-        }
-    }
-}

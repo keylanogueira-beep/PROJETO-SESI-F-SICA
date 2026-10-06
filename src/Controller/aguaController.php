@@ -2,13 +2,13 @@
 
 namespace Controller;
 
-use Model\aguaController;
+use Model\aguaQualidade;
 
-class WaterController
+class aguaController
 {
-    private aguaController $aguaModel;
+    private aguaQualidade $aguaModel;
 
-    public function __construct(aguaController $aguaModel)
+    public function __construct(aguaQualidade $aguaModel)
     {
         $this->aguaModel = $aguaModel;
     }
