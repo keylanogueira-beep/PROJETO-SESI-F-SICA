@@ -1,0 +1,17 @@
+{
+    "name": "aluno.senai/projeto-sesi-f-sica",
+    "description": "projeto integrado",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "AlunoSenai\\ProjetoSesiFSica\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "keylanogueira-beep",
+            "email": "keyla.nogueira@ba.estudante.senai.br"
+        }
+    ],
+    "require": {}
+}
